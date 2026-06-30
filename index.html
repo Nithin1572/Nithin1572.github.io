@@ -1,1054 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="en" class="loading">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nithin Kumar Reddy Annapu Reddy | Data Scientist & ML Engineer</title>
-  <meta name="description" content="Data Scientist with expertise in GenAI, RAG pipelines, NLP, and ML systems. M.S. Data Analytics — University of Illinois Springfield. Available May 2026." />
-  <meta name="keywords" content="Data Scientist, Machine Learning, GenAI, RAG, NLP, LLMs, Python, Power BI, AWS, GCP, Spark" />
-  <meta name="author" content="Nithin Kumar Reddy Annapu Reddy" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://nithinkumarreddyannapureddy.me" />
-  <meta property="og:title" content="Nithin Kumar Reddy Annapu Reddy | Data Scientist & ML Engineer" />
-  <meta property="og:description" content="GenAI & ML Systems: RAG pipelines, LLM virtual assistants, healthcare analytics at scale. MS Data Analytics · UIS · Available May 2026." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nithinkumarreddyannapureddy.me" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nithin Kumar Reddy | Data Scientist & ML Engineer" />
-  <meta name="twitter:description" content="GenAI · RAG · NLP · LLMs · Big Data · Power BI" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nithin Kumar Reddy Annapu Reddy",
-    "url": "https://nithinkumarreddyannapureddy.me",
-    "email": "nithinkumarreddyannapureddy@gmail.com",
-    "telephone": "+1-217-494-2920",
-    "jobTitle": "Data Scientist / ML Engineer",
-    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "University of Illinois Springfield" }],
-    "sameAs": ["https://www.linkedin.com/in/nithinkrar/", "https://github.com/Nithin1572"]
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
- 
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
-    :root {
-      --bg:    #07101f;
-      --bg1:   #0d1b2e;
-      --bg2:   #14253a;
-      --white: #f4f9ff;
-      --mid:   #8fe1ff;
-      --dim:   #4c647f;
-      --text:  #eef6ff;
-      --muted: #a5b8cc;
-      --em:    #9af2d2;
-      --pu:    #c7b5ff;
-      --am:    #ffd38a;
-      --cb:    rgba(143,225,255,.10);
-      --glass: rgba(255,255,255,.05);
-      --glass-2: rgba(255,255,255,.07);
-      --shadow-soft: 0 10px 30px rgba(0,0,0,.22);
-      --shadow-glow: 0 0 0 1px rgba(255,255,255,.04), 0 10px 26px rgba(50,90,140,.25);
-    }
- 
-    html { scroll-behavior: smooth; }
- 
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(111,211,255,.08), transparent 30%),
-        radial-gradient(circle at top right, rgba(181,156,255,.08), transparent 28%),
-        linear-gradient(180deg, #030812 0%, #050c16 40%, #08111d 100%);
-      color: var(--text);
-      font-family: 'Outfit', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
- 
-    #scroll-bar {
-      position: fixed; top: 0; left: 0;
-      height: 2px; width: 0%;
-      background: linear-gradient(90deg, var(--mid), var(--em), var(--pu));
-      z-index: 999;
-      box-shadow: 0 0 10px rgba(111,211,255,.28);
-    }
- 
-    canvas#bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .75; }
- 
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      border-bottom: 1px solid rgba(255,255,255,.05);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      background: rgba(4,11,20,.72);
-    }
-    .nav-inner {
-      max-width: 1140px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 62px; padding: 0 2rem;
-    }
-    .logo {
-      font-family: 'Chakra Petch', monospace;
-      font-weight: 700; font-size: 1.2rem;
-      color: var(--white); letter-spacing: 2px; text-decoration: none;
-    }
-    .logo em { color: var(--mid); font-style: normal; }
-    .nav-dot {
-      display: inline-block; width: 7px; height: 7px;
-      border-radius: 50%; background: var(--em);
-      margin-left: 8px; animation: pulse 2s infinite;
-      box-shadow: 0 0 10px rgba(127,231,196,.35);
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none;
-      font-size: .8rem; font-weight: 500; letter-spacing: .08em;
-      text-transform: uppercase; transition: color .2s;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; padding: 4px; background: none; border: none;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--white); border-radius: 2px; transition: all .3s;
-    }
-    .mobile-menu {
-      display: none; position: fixed; top: 62px; left: 0; right: 0;
-      background: rgba(4,11,20,.94);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-      padding: 1.5rem 2rem; z-index: 99;
-      backdrop-filter: blur(16px);
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
-    .mobile-menu a {
-      color: var(--muted); text-decoration: none;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .9rem; text-transform: uppercase;
-      letter-spacing: .1em; transition: color .2s;
-    }
-    .mobile-menu a:hover { color: var(--white); }
- 
-    .hero {
-      min-height: 100vh; display: flex; align-items: center;
-      justify-content: center; padding: 80px 2rem 4rem;
-      position: relative; z-index: 1;
-    }
-    .hero-c { max-width: 900px; width: 100%; text-align: center; }
-    .avail-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 18px; border-radius: 100px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.035);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .72rem; color: var(--em);
-      letter-spacing: .1em; margin-bottom: 2.5rem; text-transform: uppercase;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-    }
-    .live-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--em); animation: pulse 2s infinite; flex-shrink: 0;
-    }
-    .hero-name {
-      font-family: 'Chakra Petch', monospace;
-      font-size: clamp(2.4rem, 7.5vw, 5.6rem);
-      font-weight: 700; line-height: .95;
-      letter-spacing: -.03em; margin-bottom: .4rem;
-    }
-    .hero-name .line1 { display: block; color: var(--white); }
-    .hero-name .line2 {
-      display: block;
-      background: linear-gradient(135deg, #eef6ff 0%, #9adfff 42%, #b59cff 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .char {
-      display: inline-block; opacity: 0;
-      transform: translateY(40px) rotateX(-60deg);
-      transform-style: preserve-3d;
-      animation: charIn .6s cubic-bezier(.16,1,.3,1) forwards;
-    }
-    @keyframes charIn { to { opacity: 1; transform: none; } }
-    .hero-role {
-      font-family: 'JetBrains Mono', monospace; font-size: 1.05rem;
-      color: var(--mid); margin: .8rem 0 1.5rem; min-height: 1.6rem;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .cursor-blink {
-      display: inline-block; width: 2px; height: 1.1em;
-      background: var(--mid); animation: blink .8s infinite; vertical-align: middle;
-    }
-    .hero-desc {
-      font-size: 1.05rem; color: var(--muted);
-      max-width: 600px; margin: 0 auto 2.5rem;
-      font-weight: 300; line-height: 1.85;
-    }
-    .hero-desc strong { color: var(--text); font-weight: 500; }
-    .hero-btns {
-      display: flex; gap: 1rem; justify-content: center;
-      flex-wrap: wrap; margin-bottom: 4rem;
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 30px; border-radius: 12px;
-      font-weight: 600; font-size: .9rem;
-      text-decoration: none; transition: all .25s ease;
-      cursor: pointer; border: none; font-family: 'Outfit', sans-serif;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #a8e4ff 0%, #7fd4ff 100%); color: #06111d;
-      box-shadow: 0 12px 30px rgba(55,126,189,.22);
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(55,126,189,.28);
-      filter: brightness(1.03);
-    }
-    .btn-ghost {
-      background: rgba(255,255,255,.025); color: var(--text);
-      border: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(8px);
-    }
-    .btn-ghost:hover { border-color: rgba(255,255,255,.16); color: var(--white); background: rgba(255,255,255,.04); }
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(4,1fr);
-      gap: 1rem; max-width: 700px; margin: 0 auto;
-    }
-    .stat-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.025));
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 16px; padding: 1.25rem;
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-glow);
-      transition: border-color .3s, transform .3s, background .3s;
-    }
-    .stat-card:hover { border-color: rgba(111,211,255,.16); transform: translateY(-3px); background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03)); }
-    .stat-num {
-      font-family: 'Chakra Petch', monospace; font-size: 2rem;
-      font-weight: 700; color: var(--white); display: block; line-height: 1;
-    }
-    .stat-label {
-      font-size: .72rem; color: var(--muted);
-      text-transform: uppercase; letter-spacing: .08em;
-      margin-top: .3rem; display: block;
-    }
- 
-    section { position: relative; z-index: 1; padding: 6rem 2rem; }
-    section:nth-of-type(odd) { background: transparent; }
-    section:nth-of-type(even) { background: var(--bg1); }
-    .section-inner { max-width: 1140px; margin: 0 auto; }
-    .bg-alt { background: var(--bg2); }
-    .s-eyebrow {
-      font-family: 'JetBrains Mono', monospace; font-size: .72rem;
-      color: var(--mid); letter-spacing: .2em; text-transform: uppercase;
-      display: flex; align-items: center; gap: .75rem; margin-bottom: .6rem;
-    }
-    .s-eyebrow::before {
-      content: ''; display: inline-block;
-      width: 30px; height: 1px; background: linear-gradient(90deg, var(--mid), transparent);
-    }
-    .s-title {
-      font-family: 'Chakra Petch', monospace;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700; letter-spacing: -.04em;
-      line-height: 1.05; margin-bottom: 3rem;
-    }
-    .s-title span {
-      background: linear-gradient(135deg, #eef6ff, #8bdcff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .sub-heading {
-      font-family: 'Chakra Petch', monospace; font-weight: 600;
-      font-size: .95rem; color: var(--muted);
-      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1.2rem;
-    }
- 
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag {
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.06);
-      color: var(--muted); font-size: .75rem;
-      padding: 4px 10px; border-radius: 999px;
-      font-family: 'JetBrains Mono', monospace;
-      transition: all .2s; cursor: default;
-    }
-    .tag:hover { border-color: rgba(111,211,255,.18); color: var(--white); background: var(--cb); }
- 
-    .timeline { position: relative; padding-left: 2.5rem; }
-    .timeline::before {
-      content: ''; position: absolute; left: 4px; top: 10px; bottom: 0;
-      width: 1px;
-      background: linear-gradient(180deg, rgba(111,211,255,.6), rgba(111,211,255,.06));
-    }
-    .tl-item { position: relative; margin-bottom: 3rem; }
-    .tl-dot {
-      position: absolute; left: -2.5rem; top: 6px;
-      width: 10px; height: 10px; border-radius: 50%;
-      background: #0b1522;
-      border: 2px solid var(--mid);
-      box-shadow: 0 0 0 6px rgba(111,211,255,.06);
-    }
-    .tl-date {
-      font-family: 'JetBrains Mono', monospace; font-size: .7rem;
-      color: var(--mid); letter-spacing: .1em;
-      text-transform: uppercase; margin-bottom: .2rem;
-    }
-    .tl-co { font-size: .85rem; color: var(--em); font-weight: 500; margin-bottom: .2rem; }
-    .tl-role {
-      font-family: 'Chakra Petch', monospace; font-size: 1.1rem;
-      font-weight: 600; margin-bottom: .75rem; color: var(--text);
-    }
-    .tl-pts { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
-    .tl-pts li {
-      font-size: .875rem; color: var(--muted);
-      padding-left: 1rem; position: relative;
-      font-weight: 300; line-height: 1.65;
-    }
-    .tl-pts li::before {
-      content: '▹'; position: absolute; left: 0;
-      color: var(--mid); font-size: .8rem;
-    }
- 
-    .edu-grid {
-      display: grid; grid-template-columns: repeat(2,1fr);
-      gap: 1.5rem; margin-bottom: 2.5rem;
-    }
-    .edu-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.025));
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 18px; padding: 1.75rem;
-      transition: border-color .3s, transform .3s, box-shadow .3s;
-      box-shadow: var(--shadow-soft);
-    }
-    .edu-card:hover { border-color: rgba(111,211,255,.14); transform: translateY(-3px); box-shadow: 0 16px 34px rgba(0,0,0,.2); }
-    .edu-yr {
-      font-family: 'JetBrains Mono', monospace; font-size: .68rem;
-      color: var(--em); letter-spacing: .12em;
-      text-transform: uppercase; margin-bottom: .4rem;
-    }
-    .edu-deg {
-      font-family: 'Chakra Petch', monospace; font-size: 1rem;
-      font-weight: 700; margin-bottom: .2rem;
-    }
-    .edu-field { color: var(--mid); font-size: .88rem; font-weight: 500; margin-bottom: .4rem; }
-    .edu-school { font-size: .82rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
-    .edu-bottom {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-top: 1.1rem; padding-top: 1.1rem;
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-    .edu-gpa {
-      font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--white);
-    }
-    .edu-courses {
-      font-size: .75rem; color: var(--muted);
-      margin-top: .7rem; line-height: 1.6; font-weight: 300;
-    }
- 
-    .cert-grid {
-      display: grid; grid-template-columns: repeat(2,1fr);
-      gap: .9rem; margin-bottom: 2.5rem;
-    }
-    .cert-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 14px; padding: 1.1rem;
-      display: flex; gap: .9rem; align-items: flex-start;
-      transition: border-color .3s, transform .3s;
-    }
-    .cert-card:hover { border-color: rgba(127,231,196,.16); transform: translateY(-2px); }
-    .cert-ico {
-      width: 34px; height: 34px; border-radius: 10px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .85rem; flex-shrink: 0; color: var(--mid);
-    }
-    .cert-name {
-      font-size: .84rem; font-weight: 600;
-      color: var(--text); line-height: 1.4; margin-bottom: .2rem;
-    }
-    .cert-by {
-      font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--mid);
-    }
- 
-    .awards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .award-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 14px; padding: 1.1rem;
-      text-align: center; transition: all .25s;
-      box-shadow: var(--shadow-soft);
-    }
-    .award-card:hover { border-color: rgba(243,191,114,.22); transform: translateY(-3px); }
-    .award-ico { font-size: 1.4rem; margin-bottom: .5rem; }
-    .award-txt { font-size: .8rem; color: var(--muted); line-height: 1.5; font-weight: 300; }
- 
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
-    }
-    .contact-links { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.5rem; }
-    .contact-link {
-      display: flex; align-items: center; gap: 12px;
-      padding: 13px 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 14px; text-decoration: none;
-      color: var(--text); font-size: .88rem; transition: all .25s;
-      box-shadow: var(--shadow-soft);
-    }
-    .contact-link:hover { border-color: rgba(111,211,255,.16); color: var(--white); transform: translateX(6px); }
-    .cl-ico {
-      width: 34px; height: 34px; border-radius: 10px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .9rem; flex-shrink: 0; color: var(--mid);
-    }
-    .contact-cta {
-      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.025));
-      border: 1px solid rgba(255,255,255,.07);
-      border-radius: 24px; padding: 2.5rem; text-align: center;
-      box-shadow: 0 18px 40px rgba(0,0,0,.22);
-    }
-    .cta-ring {
-      width: 110px; height: 110px; border-radius: 50%;
-      margin: 0 auto 1.5rem; padding: 3px;
-      background: linear-gradient(135deg, #b8e6ff, #88d9ff, #b59cff);
-      position: relative;
-      box-shadow: 0 10px 28px rgba(88,132,184,.24);
-    }
-    .cta-ring::before {
-      content: ''; position: absolute; inset: -8px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.07);
-      animation: ring-spin 10s linear infinite;
-    }
-    .cta-initials {
-      width: 100%; height: 100%; border-radius: 50%;
-      background: #0c1726; border: 3px solid #0c1726;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Chakra Petch', monospace;
-      font-size: 1.6rem; font-weight: 700; color: var(--white);
-    }
-    @keyframes ring-spin { to { transform: rotate(360deg); } }
-    .cta-avail {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(255,255,255,.035);
-      border: 1px solid rgba(255,255,255,.07);
-      color: var(--em); font-size: .75rem;
-      padding: 5px 14px; border-radius: 100px;
-      margin-bottom: 1.2rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
- 
-    footer {
-      background: rgba(3,8,18,.9);
-      border-top: 1px solid rgba(255,255,255,.05);
-      padding: 2rem; text-align: center;
-      font-size: .8rem; color: var(--muted);
-      position: relative; z-index: 1;
-    }
-    footer span { color: var(--white); }
-    footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
-    footer a:hover { color: var(--white); }
- 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: .55; transform: scale(1.25); }
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0; }
-    }
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.on { opacity: 1; transform: none; }
- 
-    @media (max-width: 900px) {
-      .hero-stats { grid-template-columns: repeat(2,1fr); }
-      .contact-grid { grid-template-columns: 1fr; }
-      .edu-grid, .cert-grid, .awards-grid { grid-template-columns: repeat(2,1fr); }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
-    @media (max-width: 600px) {
-      .hero-stats, .edu-grid, .cert-grid, .awards-grid { grid-template-columns: 1fr; }
-      section { padding: 4rem 1.25rem; }
-    }
+  <meta name="description" content="Data Scientist with expertise in GenAI, RAG pipelines, NLP, and ML systems. M.S. Data Analytics — University of Illinois Springfield. Available May 2026.">
+  <meta name="keywords" content="Data Scientist, Machine Learning, GenAI, RAG, NLP, LLMs, Python, Power BI, AWS, GCP, Spark">
+  <meta name="author" content="Nithin Kumar Reddy Annapu Reddy">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Big+Shoulders+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  
+  <style id="ld-critical">
+    #loader{display:none}
+    html.loading{overflow:hidden}
+    html.loading body{overflow:hidden}
+    html.loading #loader{display:flex}
   </style>
 </head>
- 
 <body>
- 
-  <div id="scroll-bar" aria-hidden="true"></div>
-  <canvas id="bg" aria-hidden="true"></canvas>
- 
-  <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="logo" href="#top">NKR<em>.</em><span class="nav-dot" aria-hidden="true"></span></a>
-      <ul class="nav-links">
-        <li><a href="#experience">experience</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#education">education</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-      <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
- 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul>
-      <li><a href="#experience" onclick="closeMobile()">experience</a></li>
-      <li><a href="#projects" onclick="closeMobile()">projects</a></li>
-      <li><a href="#education" onclick="closeMobile()">education</a></li>
-      <li><a href="#contact" onclick="closeMobile()">contact</a></li>
-    </ul>
+
+<!-- ============================ LOADER ============================ -->
+<div id="loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+  <div class="ld-top">
+    <span class="ld-tag">PORTFOLIO</span>
+    <span class="ld-tag">&copy; 2026</span>
   </div>
- 
-  <section class="hero" id="top" aria-label="Introduction">
-    <div class="hero-c">
-      <div class="avail-pill" role="status">
-        <span class="live-dot" aria-hidden="true"></span>
-        available &middot; full-time &middot; internships &middot; usa
+
+  <div class="ld-center">
+    <div class="ld-mono" aria-hidden="true">
+      <div class="ld-mono-text">NKR</div>
+      <div class="ld-mono-fill" id="ldFill">NKR</div>
+    </div>
+    <div class="ld-name" id="ldText" aria-hidden="true"></div>
+    <div class="ld-role">DATA SCIENTIST &amp; ML ENGINEER</div>
+  </div>
+
+  <div class="ld-bottom">
+    <div class="ld-track"><span class="ld-track-fill" id="ldTrackFill"></span></div>
+    <div class="ld-count"><span id="ldCount">0</span><i>%</i></div>
+  </div>
+</div>
+
+<!-- ============================ NAV ============================ -->
+<header class="site-header">
+  <div class="navbar">
+    <div class="nav-inner">
+      <a class="brandmark" href="#top" aria-label="Nithin Kumar Reddy home">
+        <span class="monogram">NKR.</span>
+        <span class="name">NITHIN KUMAR REDDY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#top" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a class="btn-resume" href="https://drive.google.com/file/d/18xyymoeGObzP09d1CJGDga8xVszYVWZC/view" target="_blank" rel="noopener">View Resume
+          <svg viewBox="0 0 16 16" fill="none"><path d="M5 11 11 5M11 5H6M11 5v5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" data-menu-open><span></span><span></span><span></span></button>
       </div>
-      <h1 class="hero-name">
-        <span class="line1" id="l1" aria-label="Nithin Kumar Reddy"></span>
-        <span class="line2" id="l2" aria-label="Annapu Reddy"></span>
-      </h1>
-      <div class="hero-role" aria-live="polite">
-        <span id="typed"></span>
-        <span class="cursor-blink" aria-hidden="true"></span>
+    </div>
+  </div>
+</header>
+
+<!-- mobile sheet -->
+<div class="mobile-sheet" id="mobileSheet">
+  <div class="mobile-sheet-top">
+    <span class="mobile-brand">
+      <span class="monogram">NKR.</span>
+      <span class="name">NITHIN KUMAR REDDY</span>
+    </span>
+    <button class="mobile-sheet-close" aria-label="Close menu" data-menu-close>×</button>
+  </div>
+  <nav>
+    <a href="#top" class="active" data-menu-close>Home</a>
+    <a data-menu-close href="#projects">Projects</a>
+    <a data-menu-close href="#experience">Experience</a>
+    <a data-menu-close href="#education">Education</a>
+    <a data-menu-close href="#contact">Contact</a>
+  </nav>
+  <a class="btn-resume" href="https://drive.google.com/file/d/18xyymoeGObzP09d1CJGDga8xVszYVWZC/view" target="_blank" rel="noopener">View Resume
+    <svg viewBox="0 0 16 16" fill="none"><path d="M5 11 11 5M11 5H6M11 5v5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<main id="top">
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="hero-frame reveal">
+    <div class="hero-cols">
+      <!-- BOX 1 — intro / heading -->
+      <div class="hero-left">
+        <div class="hero-meta">
+          <div class="hero-role">
+            <span class="role-icon" aria-hidden="true">
+              ⚙️
+            </span>
+            <span id="typed">Data Scientist</span>
+          </div>
+          <div class="hero-open">
+            <span class="dot"></span>
+            <span>Available May 2026</span>
+          </div>
+        </div>
+
+        <h1 class="hero-h1">Building production-grade GenAI &amp; ML systems that scale.</h1>
+        <p class="hero-intro">From RAG pipelines and LLM applications to big data analytics across finance and healthcare. Currently pursuing an M.S. in Data Analytics at University of Illinois Springfield.</p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="label">Math Olympiad</span>
+            <span class="value">🥇 Gold Medal</span>
+          </div>
+          <span class="stat-div"></span>
+          <div class="stat">
+            <span class="label">Python Contest</span>
+            <span class="value">🥇 Gold Medal</span>
+          </div>
+          <span class="stat-div"></span>
+          <div class="stat">
+            <span class="label">CodeChef USA</span>
+            <span class="value">#88 Rank</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <div class="cta-pair">
+            <a class="btn btn-primary" href="#projects">View Work
+              <svg viewBox="0 0 18 18" fill="none"><path d="M4 14 14 4M14 4H6.5M14 4v7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-outline" href="https://drive.google.com/file/d/18xyymoeGObzP09d1CJGDga8xVszYVWZC/view" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/nithinkrar/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+            <a href="https://github.com/Nithin1572" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <p class="hero-desc">
-        Building <strong>production-grade GenAI &amp; ML systems</strong> that scale — from RAG pipelines
-        and LLM virtual assistants to big data analytics across energy and healthcare.
-        M.S. Data Analytics &middot; UIS &middot; <strong>Available May 2026</strong>.
-      </p>
-      <div class="hero-btns">
-        <a href="#experience" class="btn btn-primary">View Experience &rarr;</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-      </div>
-      <div class="hero-stats" role="list">
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="5" data-suffix="M+">0</span>
-          <span class="stat-label">Healthcare Records</span>
+
+      <div class="hero-divider" aria-hidden="true"></div>
+
+      <!-- BOX 2 — industries / what I did -->
+      <div class="hero-right">
+        <div class="panel-block">
+          <div class="panel-label">INDUSTRIES</div>
+          <div class="tag-cluster">
+            <span class="ind-tag">FINANCE</span>
+            <span class="ind-tag">HEALTHCARE</span>
+            <span class="ind-tag">EDUCATION</span>
+          </div>
         </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="1" data-suffix="M+">0</span>
-          <span class="stat-label">Docs Indexed</span>
-        </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="88" data-suffix="">0</span>
-          <span class="stat-label">CodeChef USA Rank</span>
-        </div>
-        <div class="stat-card reveal" role="listitem">
-          <span class="stat-num" data-target="3" data-suffix="+">0</span>
-          <span class="stat-label">Industry Domains</span>
+        <div class="panel-block">
+          <div class="panel-label">SPECIALIZATIONS</div>
+          <div class="tag-cluster">
+            <span class="ind-tag">GENAI / RAG</span>
+            <span class="ind-tag">NLP / LLMS</span>
+            <span class="ind-tag">BIG DATA</span>
+            <span class="ind-tag">MLOPS</span>
+            <span class="ind-tag">DEEP LEARNING</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
- 
-  <section id="experience" class="bg-alt">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">01 &middot; experience</div>
-        <h2 class="s-title">Professional <span>History</span></h2>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS ============================ -->
+<section class="projects wrap" id="projects">
+  <div class="section-head reveal">
+    <h2>FEATURED PROJECTS</h2>
+  </div>
+
+  <!-- Card 01 — RAG -->
+  <article class="pcard img-right reveal">
+    <span class="pcard-accent acc-terracotta"></span>
+    <a aria-label='View on GitHub' class='pcard-stretch' href='https://github.com/Nithin1572' target="_blank" rel="noopener"></a>
+    <div class="pcard-body">
+      <div class="pcard-idx">01</div>
+      <div class="pcard-tags"><span class="pill">GenAI</span><span class="pill">LLMs</span></div>
+      <h3>RAG-Powered Virtual Assistant</h3>
+      <p class="pcard-desc">Built a retrieval-augmented generation pipeline with semantic search and an LLM-powered Q&A interface for faster document intelligence.</p>
+      <span class="metric">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M9.33334 9.91667C9.33334 10.2261 9.45625 10.5228 9.67504 10.7416C9.89384 10.9604 10.1906 11.0833 10.5 11.0833C10.8094 11.0833 11.1062 10.9604 11.325 10.7416C11.5438 10.5228 11.6667 10.2261 11.6667 9.91667C11.6667 9.60725 11.5438 9.3105 11.325 9.09171C11.1062 8.87292 10.8094 8.75 10.5 8.75C10.1906 8.75 9.89384 8.87292 9.67504 9.09171C9.45625 9.3105 9.33334 9.60725 9.33334 9.91667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.91667 9.33329V9.91663C2.91667 10.226 3.03958 10.5228 3.25838 10.7416C3.47717 10.9604 3.77391 11.0833 4.08333 11.0833C4.39275 11.0833 4.6895 10.9604 4.90829 10.7416C5.12708 10.5228 5.25 10.226 5.25 9.91663V6.99996H3.5C3.03587 6.99996 2.59075 7.18433 2.26256 7.51252C1.93437 7.84071 1.75 8.28583 1.75 8.74996V9.33329H7.58333C7.79954 8.70863 8.18822 8.15797 8.70439 7.74503C9.22056 7.33209 9.84311 7.07377 10.5 6.99996V4.08329C10.5 3.77387 10.3771 3.47713 10.1583 3.25833C9.9395 3.03954 9.64275 2.91663 9.33333 2.91663H8.75" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 5.25H5.25" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Python &bull; LangChain &bull; FAISS
+      </span>
+      <div class="pcard-role">Machine Learning Engineer</div>
+      <a class='read-link' href='https://github.com/Nithin1572' target="_blank" rel="noopener">View on GitHub
+        <svg viewBox="0 0 18 18" fill="none"><path d="M4 14 14 4M14 4H6.5M14 4v7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="pcard-media">
+      <img class="pcard-bgfill" src="assets/img/thumb-rag.png" alt="" aria-hidden="true">
+      <img class="pcard-thumb" src="assets/img/thumb-rag.png" alt="RAG Virtual Assistant Interface">
+    </div>
+  </article>
+
+  <!-- Card 02 — Healthcare Big Data -->
+  <article class="pcard img-left reveal">
+    <span class="pcard-accent acc-teal"></span>
+    <a aria-label='View on GitHub' class='pcard-stretch' href='https://github.com/Nithin1572' target="_blank" rel="noopener"></a>
+    <div class="pcard-body">
+      <div class="pcard-idx">02</div>
+      <div class="pcard-tags"><span class="pill">Big Data</span><span class="pill">Analytics</span></div>
+      <h3>Healthcare Big Data Analytics</h3>
+      <p class="pcard-desc">Processed healthcare records at scale with Spark and Hive, surfacing operational patterns and patient outcome insights.</p>
+      <span class="metric">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M12.2406 7.30921C12.3047 6.22379 12.0302 5.14525 11.455 4.22254C10.8798 3.29983 10.0323 2.57848 9.02949 2.15811C8.02672 1.73774 6.91817 1.63909 5.85693 1.87578C4.79569 2.11247 3.83412 2.67282 3.10501 3.47945C2.3759 4.28609 1.91523 5.2992 1.78662 6.37888C1.658 7.45856 1.86779 8.55154 2.38701 9.50688C2.90623 10.4622 3.70926 11.2328 4.6852 11.7121C5.66115 12.1915 6.76185 12.356 7.83531 12.183" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 4.08337V7.00004L8.75 8.75004" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.0834 9.33337L9.91669 11.0834H12.25L11.0834 12.8334" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Spark &bull; Hive &bull; AWS
+      </span>
+      <div class="pcard-role">Data Engineer</div>
+      <a class='read-link' href='https://github.com/Nithin1572' target="_blank" rel="noopener">View on GitHub
+        <svg viewBox="0 0 18 18" fill="none"><path d="M4 14 14 4M14 4H6.5M14 4v7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="pcard-media">
+      <img class="pcard-bgfill" src="assets/img/thumb-healthcare.png" alt="" aria-hidden="true">
+      <img class="pcard-thumb" src="assets/img/thumb-healthcare.png" alt="Healthcare Dashboard">
+    </div>
+  </article>
+
+  <!-- Card 03 — Telugu Voice -->
+  <article class="pcard img-right reveal">
+    <span class="pcard-accent acc-sage"></span>
+    <a aria-label='View on GitHub' class='pcard-stretch' href='https://github.com/Nithin1572' target="_blank" rel="noopener"></a>
+    <div class="pcard-body">
+      <div class="pcard-idx">03</div>
+      <div class="pcard-tags"><span class="pill">NLP</span><span class="pill">Deep Learning</span></div>
+      <h3>Telugu Voice Dialogue System</h3>
+      <p class="pcard-desc">Contributed to a voice-enabled dialogue system supporting Telugu dialects with speech-to-text and command recognition workflows.</p>
+      <span class="metric">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M2.33334 11.0834H11.6667" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.33334 8.75L4.66667 5.25L7 6.41667L9.33334 3.5L11.6667 5.83333" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        TensorFlow &bull; PyTorch &bull; NLP
+      </span>
+      <div class="pcard-role">Data Scientist Intern</div>
+      <a class='read-link' href='https://github.com/Nithin1572' target="_blank" rel="noopener">View on GitHub
+        <svg viewBox="0 0 18 18" fill="none"><path d="M4 14 14 4M14 4H6.5M14 4v7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="pcard-media">
+      <img class="pcard-bgfill" src="assets/img/thumb-telugu.png" alt="" aria-hidden="true">
+      <img class="pcard-thumb" src="assets/img/thumb-telugu.png" alt="Telugu Voice Dialogue System">
+    </div>
+  </article>
+</section>
+
+<!-- ============================ SKILLS & TOOLS ============================ -->
+<section class="skills-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>SKILLS &amp; TOOLS</h2>
+    </div>
+    <div class="skills-wall reveal">
+      <div class="skills-grid row1">
+        <div class="skill-cell"><span class="skill-icon">🐍</span> Python</div>
+        <div class="skill-cell"><span class="skill-icon">🗄️</span> SQL</div>
+        <div class="skill-cell"><span class="skill-icon">🧠</span> Deep Learning</div>
+        <div class="skill-cell"><span class="skill-icon">📊</span> Machine Learning</div>
+        <div class="skill-cell"><span class="skill-icon">🤖</span> GenAI / LLMs</div>
+        <div class="skill-cell"><span class="skill-icon">🗣️</span> NLP</div>
       </div>
-      <div class="timeline reveal">
- 
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">Apr 2024 — Jul 2024</div>
-          <div class="tl-co">F(Y) Solutions &middot; Hyderabad, India </div>
-          <div class="tl-role">Teaching Assistant</div>
-          <span class="edu-gpa">Python &middot; Analytics &middot; Debugging &middot; Code optimization &middot; Algorithms</span>
-          <!-- <ul class="tl-pts">
-            <li>Conducted classes on Data Structures and Algorithms using Python and C++, covering dictionaries, trees, maps, and dynamic programming</li>
-            <li>Curated coding challenges with edge cases and optimized test scenarios to develop strong algorithmic thinking in students</li>
-            <li>Guided students through solving complex problems and debugging solutions across both languages</li>
-            <li>Encouraged clean code practices, efficient solutions, and peer learning in a collaborative environment</li>
-          </ul> -->
-        </div>
- 
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">Jul 2023 — Mar 2024</div>
-          <div class="tl-co">InnoVites &middot; Hyderabad, India </div>
-          <div class="tl-role">Associate Software Developer</div>
-          <span class="edu-gpa">X++ &middot; SQL &middot; CI/CD &middot; Power BI &middot; DevOps &middot; ETL &middot; Automation</span>
-          <!-- <ul class="tl-pts">
-            <li>Developed ERP modules in X++ and SQL for Microsoft Dynamics 365 Finance &amp; Operations, ensuring scalable and reliable functionality</li>
-            <li>Built interactive Power BI dashboards delivering actionable insights for business stakeholders across the organization</li>
-            <li>Designed and managed CI/CD pipelines, automating deployments and maintaining version control across environments</li>
-            <li>Developed custom Azure DevOps extensions to boost workflow efficiency and trained newly joined interns to ramp up quickly</li>
-            <li>Used SQL Server Management Studio (SSMS) for analyzing and optimizing query performance on large datasets</li>
-          </ul> -->
-        </div>
- 
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-date">May 2022 — Jul 2022</div>
-          <div class="tl-co">Swecha Telangana &middot; Hyderabad, India </div>
-          <div class="tl-role">Data Scientist Intern</div>
-          <span class="edu-gpa">NLP &middot; Speech &middot; TensorFlow &middot; PyTorch &middot; NLTK &middot; Deep Learning &middot; Annotation &middot; Git &middot; Docker &middot; Cloud &middot; Modeling &middot; AI</span>
-          <!-- <ul class="tl-pts">
-            <li>Contributed to building voice-enabled dialogue systems for Telugu, incorporating diverse dialectical tones to enhance accessibility</li>
-            <li>Applied NLP and speech recognition methods using TensorFlow, PyTorch, and NLTK to support model development for dialectal variations</li>
-            <li>Assisted in fine-tuning deep learning models for speech-to-text and voice command recognition</li>
-            <li>Participated in data collection and annotation efforts; utilized Git, Docker, and cloud tools for scalable deployment</li>
-          </ul> -->
-        </div>
- 
+      <div class="skills-grid row2">
+        <div class="skill-cell"><span class="skill-icon">🔥</span> PyTorch</div>
+        <div class="skill-cell"><span class="skill-icon">⚡</span> TensorFlow</div>
+        <div class="skill-cell"><span class="skill-icon">🔗</span> LangChain</div>
+        <div class="skill-cell"><span class="skill-icon">🐘</span> Hadoop / Hive</div>
+        <div class="skill-cell"><span class="skill-icon">☄️</span> Apache Spark</div>
+      </div>
+      <div class="skills-grid row3">
+        <div class="skill-cell"><span class="skill-icon">☁️</span> AWS</div>
+        <div class="skill-cell"><span class="skill-icon">☁️</span> GCP</div>
+        <div class="skill-cell"><span class="skill-icon">🐳</span> Docker</div>
+        <div class="skill-cell"><span class="skill-icon">📈</span> Power BI</div>
+        <div class="skill-cell"><span class="skill-icon">🔄</span> CI/CD</div>
+        <div class="skill-cell"><span class="skill-icon">⚙️</span> MLOps</div>
       </div>
     </div>
-  </section>
- 
-  <section id="projects">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">02 &middot; projects</div>
-        <h2 class="s-title">Featured <span>Projects</span></h2>
+  </div>
+</section>
+
+<!-- ============================ WORK EXPERIENCE ============================ -->
+<section class="work wrap" id="experience">
+  <div class="section-head reveal">
+    <h2>WORK EXPERIENCE</h2>
+  </div>
+  <div class="exp-list reveal">
+    <div class="exp-row">
+      <div class="exp-left">
+        <span class="exp-ic">👨‍🏫</span>
+        <div><div class="exp-title">Teaching Assistant</div><div class="exp-co">F(Y) Solutions</div></div>
       </div>
-      <div class="edu-grid reveal">
- 
-        <div class="edu-card">
-          <div class="edu-yr">RAG &middot; LLMs &middot; Python</div>
-          <div class="edu-deg">RAG-Powered Virtual Assistant</div>
-          <div class="edu-field">GenAI / NLP</div>
-          <div class="edu-school">Built a retrieval-augmented generation pipeline indexing 1M+ documents with semantic search and an LLM-powered Q&amp;A interface, significantly reducing query response time.</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">Python &middot; LangChain &middot; FAISS</span>
-          </div>
+      <div class="exp-meta">
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><rect x="2" y="3" width="10" height="9" rx="1" stroke="currentColor" stroke-width="1.17"/><path d="M2 6h10M5 2v2M9 2v2" stroke="currentColor" stroke-width="1.17" stroke-linecap="round"/></svg>April 2024 – July 2024</span>
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><path d="M7 12s4-3.5 4-7A4 4 0 0 0 3 5c0 3.5 4 7 4 7Z" stroke="currentColor" stroke-width="1.17" stroke-linejoin="round"/><circle cx="7" cy="5" r="1.3" stroke="currentColor" stroke-width="1.17"/></svg>Hyderabad, India</span>
+        <div class="exp-skills">
+          <span class="pill">Python</span>
+          <span class="pill">Analytics</span>
+          <span class="pill">Debugging</span>
         </div>
- 
-        <div class="edu-card">
-          <div class="edu-yr">Spark &middot; Hive &middot; Healthcare</div>
-          <div class="edu-deg">Healthcare Big Data Analytics</div>
-          <div class="edu-field">Data Engineering</div>
-          <div class="edu-school">Processed and analyzed 5M+ healthcare records using Apache Spark and Hive, delivering actionable insights on patient outcomes and operational efficiency at scale.</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">Spark &middot; Hive &middot; AWS</span>
-          </div>
-        </div>
- 
-        <div class="edu-card">
-          <div class="edu-yr">NLP &middot; TensorFlow &middot; Telugu</div>
-          <div class="edu-deg">Telugu Voice Dialogue System</div>
-          <div class="edu-field">Speech &amp; NLP</div>
-          <div class="edu-school">Contributed to an open-source voice-enabled dialogue system supporting diverse Telugu dialects using TensorFlow and PyTorch for speech-to-text and voice command recognition.</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">PyTorch &middot; NLTK &middot; Docker</span>
-          </div>
-        </div>
- 
-        <div class="edu-card">
-          <div class="edu-yr">Power BI &middot; X++ &middot; Azure</div>
-          <div class="edu-deg">ERP Analytics Dashboard</div>
-          <div class="edu-field">Business Intelligence</div>
-          <div class="edu-school">Developed interactive Power BI dashboards and ERP modules for Microsoft Dynamics 365, enabling real-time business intelligence across wire &amp; cable manufacturing operations.</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">Power BI &middot; SQL &middot; Azure DevOps</span>
-          </div>
-        </div>
- 
       </div>
     </div>
-  </section>
- 
-  <section id="education" class="bg-alt">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">03 &middot; education</div>
-        <h2 class="s-title">Academic <span>Background</span></h2>
+    <div class="exp-row">
+      <div class="exp-left">
+        <span class="exp-ic">💻</span>
+        <div><div class="exp-title">Associate Software Developer</div><div class="exp-co">InnoVites</div></div>
       </div>
- 
-      <div class="edu-grid reveal">
-        <div class="edu-card">
-          <div class="edu-yr">Aug 2024 — May 2026</div>
-          <div class="edu-deg">Master of Science</div>
-          <div class="edu-field">Data Analytics</div>
-          <div class="edu-school">University of Illinois Springfield &middot; Springfield, IL, USA</div>
-          <div class="edu-courses">Relevant Coursework: Advanced Data Analytics, Databases, Statistical Methods, Data Visualization, Deep Learning</div>
-          <div class="edu-bottom">
-            <span class="edu-gpa">In Progress &#128218;</span>
-            <span style="font-size:.75rem;color:var(--muted)">Expected May 2026</span>
-          </div>
+      <div class="exp-meta">
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><rect x="2" y="3" width="10" height="9" rx="1" stroke="currentColor" stroke-width="1.17"/><path d="M2 6h10M5 2v2M9 2v2" stroke="currentColor" stroke-width="1.17" stroke-linecap="round"/></svg>July 2023 – March 2024</span>
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><path d="M7 12s4-3.5 4-7A4 4 0 0 0 3 5c0 3.5 4 7 4 7Z" stroke="currentColor" stroke-width="1.17" stroke-linejoin="round"/><circle cx="7" cy="5" r="1.3" stroke="currentColor" stroke-width="1.17"/></svg>Hyderabad, India</span>
+        <div class="exp-skills">
+          <span class="pill">SQL</span>
+          <span class="pill">CI/CD</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">DevOps</span>
         </div>
-        <div class="edu-card" style="display:flex;flex-direction:column;justify-content:center;">
-          <div style="text-align:center;padding:1rem 0;">
-            <div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--mid);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;">Focus Areas</div>
-            <div class="tags" style="justify-content:center;gap:8px;">
-              <span class="tag">Statistical Modeling</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">GenAI / LLMs</span>
-              <span class="tag">Big Data Engineering</span>
-              <span class="tag">Data Visualization</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Deep Learning</span>
-              <span class="tag">Cloud Analytics</span>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-left">
+        <span class="exp-ic">🔬</span>
+        <div><div class="exp-title">Data Scientist Intern</div><div class="exp-co">Swecha Telangana</div></div>
+      </div>
+      <div class="exp-meta">
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><rect x="2" y="3" width="10" height="9" rx="1" stroke="currentColor" stroke-width="1.17"/><path d="M2 6h10M5 2v2M9 2v2" stroke="currentColor" stroke-width="1.17" stroke-linecap="round"/></svg>May 2022 – July 2022</span>
+        <span class="m"><svg viewBox="0 0 14 14" fill="none"><path d="M7 12s4-3.5 4-7A4 4 0 0 0 3 5c0 3.5 4 7 4 7Z" stroke="currentColor" stroke-width="1.17" stroke-linejoin="round"/><circle cx="7" cy="5" r="1.3" stroke="currentColor" stroke-width="1.17"/></svg>Hyderabad, India</span>
+        <div class="exp-skills">
+          <span class="pill">NLP</span>
+          <span class="pill">TensorFlow</span>
+          <span class="pill">PyTorch</span>
+          <span class="pill">Deep Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EDUCATION & CERTS ============================ -->
+<section class="education wrap" id="education">
+  <div class="section-head reveal">
+    <h2>EDUCATION &amp; CERTIFICATIONS</h2>
+  </div>
+
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-yr"><svg viewBox="0 0 14 14" fill="none"><rect x="2" y="3" width="10" height="9" rx="1" stroke="currentColor" stroke-width="1.17"/><path d="M2 6h10M5 2v2M9 2v2" stroke="currentColor" stroke-width="1.17" stroke-linecap="round"/></svg> Aug 2024 — May 2026</div>
+      <div class="edu-deg">Master of Science</div>
+      <div class="edu-field">Data Analytics</div>
+      <div class="edu-school">University of Illinois Springfield &middot; Springfield, IL, USA</div>
+      <div class="edu-courses">Relevant Coursework: Advanced Data Analytics, Databases, Statistical Methods, Data Visualization, Deep Learning</div>
+      <div class="edu-bottom">
+        <span class="edu-gpa">In Progress 📚</span>
+      </div>
+    </div>
+    
+    <div class="edu-card-focus">
+      <div class="focus-title">Focus Areas</div>
+      <div class="focus-tags">
+        <span class="pill">Statistical Modeling</span>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">GenAI / LLMs</span>
+        <span class="pill">Big Data Engineering</span>
+        <span class="pill">Data Visualization</span>
+        <span class="pill">NLP</span>
+        <span class="pill">Deep Learning</span>
+        <span class="pill">Cloud Analytics</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-heading reveal">Certifications</h3>
+  <div class="cert-grid reveal">
+    <div class="cert-card">
+      <div class="cert-ic">☁️</div>
+      <div class="cert-body">
+        <div class="cert-name">Introduction to Generative AI &amp; Responsible AI</div>
+        <div class="cert-by">Google Cloud</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-ic">☁️</div>
+      <div class="cert-body">
+        <div class="cert-name">Introduction to Large Language Models (LLMs)</div>
+        <div class="cert-by">Google Cloud Platform</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-ic">📊</div>
+      <div class="cert-body">
+        <div class="cert-name">Advanced Data Analytics Professional Certificate</div>
+        <div class="cert-by">Google</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-ic">🧠</div>
+      <div class="cert-body">
+        <div class="cert-name">Machine Learning &amp; Deep Learning Specializations</div>
+        <div class="cert-by">DeepLearning.AI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT CTA ============================ -->
+<section class="personal" id="contact">
+  <div class="wrap personal-grid">
+    <div class="personal-copy reveal">
+      <div class="section-head">
+        <h2>LET'S CONNECT</h2>
+      </div>
+      <p>Actively seeking full-time &amp; internship roles in Data Science, ML Engineering, and Applied AI across the United States. Available May 2026.</p>
+      <p>Whether you have an opportunity or just want to chat about AI, data, or technology—let's build something that matters.</p>
+    </div>
+
+    <div class="player-col reveal">
+      <div class="contact-panel">
+        <div class="contact-panel-head">Contact Information</div>
+        <div class="contact-links">
+          <a href="mailto:nithinkumarreddyannapureddy@gmail.com" class="contact-link">
+            <div class="cl-ico">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
-          </div>
-        </div>
-      </div>
- 
-      <h3 class="sub-heading reveal">Certifications</h3>
-      <div class="cert-grid reveal">
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fab fa-google"></i></div>
-          <div>
-            <div class="cert-name">Introduction to Generative AI &amp; Responsible AI</div>
-            <div class="cert-by">Google Cloud</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fab fa-google"></i></div>
-          <div>
-            <div class="cert-name">Introduction to Large Language Models (LLMs) in GCP</div>
-            <div class="cert-by">Google Cloud Platform</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fas fa-chart-line"></i></div>
-          <div>
-            <div class="cert-name">Google Advanced Data Analytics Professional Certificate</div>
-            <div class="cert-by">Coursera / Google</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fas fa-brain"></i></div>
-          <div>
-            <div class="cert-name">Professional Data Analytics Certificate</div>
-            <div class="cert-by">DeepLearning.AI</div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-ico"><i class="fas fa-robot"></i></div>
-          <div>
-            <div class="cert-name">Machine Learning &amp; Deep Learning Specializations</div>
-            <div class="cert-by">DeepLearning.AI</div>
-          </div>
-        </div>
-      </div>
- 
-      <h3 class="sub-heading reveal" style="margin-top:2rem">Honors &amp; Awards</h3>
-      <div class="awards-grid reveal">
-        <div class="award-card">
-          <div class="award-ico">&#129351;</div>
-          <div class="award-txt">Gold Medal — MTSO (Math Talent Search Olympiad) conducted by INTSO</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#127942;</div>
-          <div class="award-txt">Certificate of Merit — INTSO (Indian National Talent Search Olympiad) in Analytical &amp; Mathematics</div>
-        </div>
-        <div class="award-card">
-          <div class="award-ico">&#127881;</div>
-          <div class="award-txt">Ranked 88th across the entire USA on CodeChef competitive programming platform</div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <section id="contact">
-    <div class="section-inner">
-      <div class="reveal">
-        <div class="s-eyebrow">04 &middot; contact</div>
-        <h2 class="s-title">Let's <span>Connect</span></h2>
-      </div>
-      <div class="contact-grid reveal">
- 
-        <div>
-          <p style="color:var(--muted);font-weight:300;font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem">
-            Actively seeking full-time &amp; internship roles in
-            <strong style="color:var(--text);font-weight:500">Data Science, ML Engineering, and Applied AI</strong>
-            across the United States. Available May 2026. Let's build something that matters.
-          </p>
-          <div class="contact-links">
-            <a href="mailto:nithinkumarreddyannapureddy@gmail.com" class="contact-link">
-              <div class="cl-ico"><i class="fas fa-envelope"></i></div>
-              nithinkumarreddyannapureddy@gmail.com
-            </a>
-            <a href="https://www.linkedin.com/in/nithinkrar/" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="cl-ico"><i class="fab fa-linkedin"></i></div>
-              linkedin.com/in/nithinkrar
-            </a>
-            <a href="https://github.com/Nithin1572" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="cl-ico"><i class="fab fa-github"></i></div>
-              github.com/Nithin1572
-            </a>
-            
-            <a href="https://nithinkumarreddyannapureddy.me" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <div class="cl-ico"><i class="fas fa-globe"></i></div>
-              nithinkumarreddyannapureddy.me
-            </a>
-          </div>
-        </div>
- 
-        <div class="contact-cta">
-          <div class="cta-ring">
-            <div class="cta-initials">NKR</div>
-          </div>
-          <div class="cta-avail"><span class="live-dot" aria-hidden="true"></span>Open to Opportunities</div>
-          <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;font-weight:300">
-            Data Analytics &middot; MS &middot; University of Illinois Springfield
-          </p>
-          <div class="tags" style="justify-content:center;margin-bottom:1.75rem">
-            <span class="tag">Data Science</span>
-            <span class="tag">GenAI</span>
-            <span class="tag">RAG</span>
-            <span class="tag">NLP</span>
-            <span class="tag">LLMs</span>
-            <span class="tag">Big Data</span>
-            <span class="tag">MLOps</span>
-          </div>
-          <a href="mailto:nithinkumarreddyannapureddy@gmail.com" class="btn btn-primary" style="width:100%;justify-content:center;text-decoration:none">
-            Send a Message <i class="fas fa-arrow-up-right-from-square" style="font-size:.75rem"></i>
+            <span class="contact-link-text">nithinkumarreddyannapureddy@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nithinkrar/" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-ico">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.1 0-1.8.6-2.12 1.18v-1h-2.3v7.9h2.3v-4.14c0-1.1.27-2.17 1.55-2.17 1.25 0 1.28 1.25 1.28 2.24v4.14h2.45M7.68 18.5V9.45H5.23v9.05h2.45M6.46 5.86c-.78 0-1.42.64-1.42 1.43s.64 1.43 1.42 1.43 1.43-.64 1.43-1.43-.65-1.43-1.43-1.43z"/></svg>
+            </div>
+            <span class="contact-link-text">linkedin.com/in/nithinkrar</span>
+          </a>
+          <a href="https://github.com/Nithin1572" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-ico">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.1-.3-.6-1.5.1-3.1 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.1.8.8 1.3 1.9 1.3 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            </div>
+            <span class="contact-link-text">github.com/Nithin1572</span>
           </a>
         </div>
- 
       </div>
     </div>
-  </section>
- 
-  <footer>
-    <p>Designed &amp; Built by <span>Nithin Kumar Reddy Annapu Reddy</span> &middot; 2026</p>
-    <p style="margin-top:.5rem">
-      <a href="mailto:nithinkumarreddyannapureddy@gmail.com">nithinkumarreddyannapureddy@gmail.com</a>
-      &middot;
-      <a href="https://nithinkumarreddyannapureddy.me" target="_blank" rel="noopener noreferrer">nithinkumarreddyannapureddy.me</a>
-      &middot; Illinois, USA
-    </p>
-  </footer>
- 
-  <script>
-    console.log('[DEBUG] Portfolio script loaded');
+  </div>
+</section>
+</main>
 
-    const scrollBar = document.getElementById('scroll-bar');
-    console.log('[DEBUG] Scroll bar element:', scrollBar);
-    let lastScrollLogY = -1;
-    window.addEventListener('scroll', () => {
-      const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      scrollBar.style.width = Math.min(pct, 100) + '%';
-      if (Math.abs(window.scrollY - lastScrollLogY) > 150) {
-        console.log('[DEBUG] Scroll update', {
-          scrollY: window.scrollY,
-          progressPct: Math.min(pct, 100)
-        });
-        lastScrollLogY = window.scrollY;
-      }
-    }, { passive: true });
- 
-    (function () {
-      const canvas = document.getElementById('bg');
-      const ctx = canvas.getContext('2d');
-      const N = 70, DIST = 130, MDIST = 100;
-      let W, H, particles = [], mouse = { x: -999, y: -999 };
-      console.log('[DEBUG] Particle background init', { canvas, N, DIST, MDIST });
- 
-      function resize() {
-        W = canvas.width = window.innerWidth;
-        H = canvas.height = window.innerHeight;
-        console.log('[DEBUG] Canvas resized', { width: W, height: H });
-      }
-      resize();
-      window.addEventListener('resize', resize, { passive: true });
-      window.addEventListener('mousemove', e => {
-        mouse.x = e.clientX; mouse.y = e.clientY;
-      }, { passive: true });
- 
-      class Particle {
-        constructor() { this.reset(); }
-        reset() {
-          this.x = Math.random() * W; this.y = Math.random() * H;
-          this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
-          this.r = Math.random() * 1.5 + .5;
-        }
-        update() {
-          this.x += this.vx; this.y += this.vy;
-          if (this.x < 0 || this.x > W) this.vx *= -1;
-          if (this.y < 0 || this.y > H) this.vy *= -1;
-          const dx = this.x - mouse.x, dy = this.y - mouse.y, d = Math.hypot(dx, dy);
-          if (d < MDIST) { const f = (MDIST - d) / MDIST * .8; this.vx += (dx / d) * f * .05; this.vy += (dy / d) * f * .05; }
-          const spd = Math.hypot(this.vx, this.vy);
-          if (spd > .8) { this.vx /= spd * .8; this.vy /= spd * .8; }
-        }
-        draw() {
-          ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(0,212,255,0.35)'; ctx.fill();
-        }
-      }
- 
-      for (let i = 0; i < N; i++) particles.push(new Particle());
-      console.log('[DEBUG] Particles created', { count: particles.length, sample: particles[0] });
- 
-      let frameCount = 0;
-      function loop() {
-        frameCount++;
-        ctx.clearRect(0, 0, W, H);
-        for (let i = 0; i < N; i++) {
-          particles[i].update(); particles[i].draw();
-          for (let j = i + 1; j < N; j++) {
-            const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
-            const d = Math.hypot(dx, dy);
-            if (d < DIST) {
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(0,212,255,${(1 - d / DIST) * .22})`;
-              ctx.lineWidth = .5; ctx.stroke();
-            }
-          }
-        }
-        if (frameCount === 1) {
-          console.log('[DEBUG] Particle animation first frame rendered');
-        }
-        requestAnimationFrame(loop);
-      }
-      loop();
-    })();
- 
-    function buildName(id, text, startDelay) {
-      const el = document.getElementById(id);
-      console.log('[DEBUG] buildName called', { id, text, startDelay, elementFound: !!el });
-      el.innerHTML = '';
-      [...text].forEach((ch, i) => {
-        const s = document.createElement('span'); s.className = 'char';
-        s.textContent = ch === ' ' ? '\u00a0' : ch;
-        s.style.animationDelay = (startDelay + i * .04) + 's';
-        el.appendChild(s);
-      });
-      console.log('[DEBUG] buildName completed', { id, charCount: text.length });
-    }
-    buildName('l1', 'NITHIN KUMAR REDDY', 0.3);
-    buildName('l2', 'ANNAPU REDDY', 1.1);
- 
-    (function () {
-      const roles = ['Data Scientist', 'GenAI Engineer', 'ML Engineer', 'NLP Engineer', 'Applied AI Researcher'];
-      let ri = 0, ci = 0, deleting = false;
-      const el = document.getElementById('typed');
-      console.log('[DEBUG] Typewriter initialized', { roles, elementFound: !!el });
-      function type() {
-        const cur = roles[ri];
-        el.textContent = deleting ? cur.slice(0, ci--) : cur.slice(0, ci++);
-        if (!deleting && ci === 1) {
-          console.log('[DEBUG] Typing started for role', { role: cur, roleIndex: ri });
-        }
-        if (!deleting && ci > cur.length) {
-          console.log('[DEBUG] Full role typed', { role: cur, roleIndex: ri });
-          setTimeout(() => { deleting = true; }, 1800); setTimeout(type, 80); return;
-        }
-        if (deleting && ci < 0) {
-          console.log('[DEBUG] Role deleted', { previousRoleIndex: ri, nextRoleIndex: (ri + 1) % roles.length });
-          deleting = false; ri = (ri + 1) % roles.length; ci = 0;
-        }
-        setTimeout(type, deleting ? 35 : 85);
-      }
-      setTimeout(() => {
-        console.log('[DEBUG] Typewriter starting after initial delay');
-        type();
-      }, 2000);
-    })();
- 
-    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
-    function countUp(el, target, suffix, duration) {
-      duration = duration || 1800; const start = performance.now();
-      console.log('[DEBUG] countUp started', { target, suffix, duration, element: el });
-      function step(now) {
-        const p = Math.min((now - start) / duration, 1);
-        el.textContent = Math.round(easeOutQuart(p) * target) + (p >= 1 ? suffix : '');
-        if (p < 1) requestAnimationFrame(step);
-        else console.log('[DEBUG] countUp completed', { target, suffix, finalText: el.textContent });
-      }
-      requestAnimationFrame(step);
-    }
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log('[DEBUG] Reveal triggered', {
-            element: entry.target,
-            hasCounters: entry.target.querySelectorAll('[data-target]').length
-          });
-          entry.target.classList.add('on');
-          entry.target.querySelectorAll('[data-target]').forEach(el => {
-            countUp(el, +el.dataset.target, el.dataset.suffix || '');
-          });
-          revealObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-    console.log('[DEBUG] Reveal observer attached', { revealCount: document.querySelectorAll('.reveal').length });
- 
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    console.log('[DEBUG] Nav observer setup', {
-      sectionIds: [...sections].map(s => s.id),
-      navLinkCount: navLinks.length
-    });
-    const navObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log('[DEBUG] Active section changed', { sectionId: entry.target.id });
-          navLinks.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-          if (active) {
-            active.classList.add('active');
-            console.log('[DEBUG] Active nav link updated', { href: active.getAttribute('href') });
-          } else {
-            console.warn('[DEBUG] No matching nav link found for section', entry.target.id);
-          }
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach(s => navObs.observe(s));
- 
-    const ham = document.getElementById('ham'), mobileMenu = document.getElementById('mobile-menu');
-    console.log('[DEBUG] Mobile menu elements', { hamFound: !!ham, mobileMenuFound: !!mobileMenu });
-    ham.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      ham.setAttribute('aria-expanded', isOpen);
-      mobileMenu.setAttribute('aria-hidden', !isOpen);
-      console.log('[DEBUG] Hamburger clicked', { isOpen });
-    });
-    function closeMobile() {
-      const wasOpen = mobileMenu.classList.contains('open');
-      mobileMenu.classList.remove('open');
-      ham.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      if (wasOpen) {
-        console.log('[DEBUG] Mobile menu closed');
-      }
-    }
-    document.addEventListener('click', e => {
-      if (!ham.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile();
-    });
- 
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('[DEBUG] DOMContentLoaded fired');
-    });
-    window.addEventListener('load', () => {
-      console.log('[DEBUG] Window load fired');
-    });
-    window.addEventListener('error', (event) => {
-      console.error('[DEBUG] Runtime error captured', {
-        message: event.message,
-        source: event.filename,
-        line: event.lineno,
-        column: event.colno,
-        error: event.error
-      });
-    });
-  </script>
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="row">
+          <span class="monogram">NKR.</span>
+          <span class="name">NITHIN KUMAR REDDY</span>
+        </div>
+        <div class="sub">Data Scientist &amp; ML Engineer</div>
+        <div class="footer-contact">
+          <button class="footer-email" id="emailBtn" data-email="nithinkumarreddyannapureddy@gmail.com">
+            nithinkumarreddyannapureddy@gmail.com <span class="copied">Copied!</span>
+          </button>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/nithinkrar/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+            <a href="https://github.com/Nithin1572" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-wordmark">
+      <div class="footer-wordmark-text">Nithin Kumar Reddy</div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nithin Kumar Reddy Annapu Reddy</span>
+      <span>Built in Illinois, USA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
 </body>
 </html>
